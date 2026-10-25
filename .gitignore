@@ -1,0 +1,8 @@
+# Local preview/debug pages generated while editing
+_preview.html
+_debug.html
+
+# OS noise
+Thumbs.db
+desktop.ini
+.DS_Store
