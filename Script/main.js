@@ -66,3 +66,14 @@ ScrollTrigger.batch(".progress-bar", {
 		});
 	},
 });
+
+// 保险：若动画因 CDN 失败或 rAF 卡住而停在起始态（opacity 0），3 秒后强制显示首屏文字
+setTimeout(() => {
+	document
+		.querySelectorAll(".hero-content h2, .hero-content p, .hero-content hr")
+		.forEach((el) => {
+			el.style.opacity = "1";
+			el.style.transform = "none";
+		});
+}, 3000);
+
