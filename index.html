@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ze Jing — Game Development student</title>
+		<meta
+			name="description"
+			content="Ze Jing, final-year Game Development student at Amsterdam University of Applied Sciences. Interactive systems, state machines, TypeScript and Lit. Looking for a graduation internship from February 2027."
+		/>
+		<link rel="icon" href="./favicon.ico" />
+		<link rel="stylesheet" href="./Style/mian.css" />
+	</head>
+	<body>
+		<!-- Main container for all sections -->
+		<div class="container">
+			<!-- Navbar for easy navigation across tabs -->
+			<header class="navbar">
+				<h1 class="logo">Ze Jing</h1>
+				<nav>
+					<ul class="nav-links">
+						<li>
+							<a href="#home">Home</a>
+						</li>
+						<li>
+							<a href="#about">About</a>
+						</li>
+						<li>
+							<a href="#projects">Projects</a>
+						</li>
+						<li>
+							<a href="#experience">Experience</a>
+						</li>
+						<li>
+							<a href="#skills">Skills</a>
+						</li>
+						<li>
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Hero Section with a large intro and interactive animations -->
+			<div class="hero" id="home">
+				<img
+					src="./Image/hero.webp"
+					alt=""
+					class="hero-image"
+					fetchpriority="high"
+				/>
+				<div class="hero-overlay"></div>
+				<div class="hero-content">
+					<h2>Ze Jing</h2>
+					<p class="tagline">
+						I build interactive systems that hold up under inspection.
+					</p>
+					<p class="hero-sub">
+						Game Development student at Amsterdam University of Applied
+						Sciences &middot; looking for a graduation internship from
+						February 2027.
+					</p>
+					<hr />
+				</div>
+			</div>
+
+			<!-- About Section with an in-depth bio and background -->
+			<section class="about" id="about">
+				<h2>About Me</h2>
+				<p>
+					I'm Ze Jing, a final-year Game Development student at Amsterdam
+					University of Applied Sciences. I like the part of a project
+					where the state has to be right &mdash; the window that can't be
+					dragged off-screen, the call that waits for an answer, the message
+					that stays unread until you actually read it.
+				</p>
+				<p>
+					I completed a three-year MBO programme in one year and graduated
+					with distinction. Right now I'm building Trust Protocol, a
+					desktop-style serious game about bank-impersonation fraud, in
+					TypeScript and Lit.
+				</p>
+			</section>
+
+			<!-- Projects Section showcasing multiple project entries -->
+			<section class="projects" id="projects">
+				<h2>Projects</h2>
+				<div class="project-gallery">
+					<a
+						href="https://github.com/ShaShu12138/Trust-Protocol"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img
+							src="./Image/trust-protocol.webp"
+							alt="Trust Protocol"
+						/>
+						<h3>Trust Protocol</h3>
+						<p>
+							A desktop-style serious game about bank-impersonation fraud.
+							Incoming mail, a bank website and a phone call all want the
+							same decision, and the player has to work out which one is
+							real. TypeScript, Lit, one runtime dependency.
+						</p>
+						<span class="project-note">Source code</span>
+					</a>
+					<a
+						href="https://shashu12138.itch.io/adventure-of-the-ball"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img
+							src="./Image/adventure-ball.webp"
+							alt="Adventure Of The Ball"
+						/>
+						<h3>Adventure Of The Ball</h3>
+						<p>Use the ball to challenge the giant stone man.</p>
+					</a>
+					<a
+						href="https://dragonnight250.itch.io/danmaku-rhapsody"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img src="./Image/danmaku.webp" alt="Danmaku Rhapsody" />
+						<h3>Danmaku Rhapsody</h3>
+						<p>
+							A mesmerizing fan-made bullet hell game inspired by the
+							renowned TouHou Project.
+						</p>
+					</a>
+					<div class="project-item">
+						<img src="./Image/dungeon.webp" alt="Dungeon exploration" />
+						<h3>Dungeon exploration</h3>
+						<p>
+							In the dim dungeon, you found a lot of treasure. But on your
+							way back, monsters blocked your way. The gem in your hand
+							began to glow...
+						</p>
+						<span class="project-note">No public build</span>
+					</div>
+					<a
+						href="https://dragonnight250.itch.io/chefs-quest-the-last-customer-20"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img src="./Image/chefs-quest.webp" alt="Chef's quest" />
+						<h3>Chef's quest: The last customer</h3>
+						<p>
+							Step into the heat of the kitchen and face the ultimate
+							challenge: an impossible-to-please customer!
+						</p>
+					</a>
+					<div class="project-item">
+						<img src="./Image/checkman.webp" alt="Check Man" />
+						<h3>Check Man</h3>
+						<p>
+							Chess + Bomberman! A multiplayer online puzzle game &mdash;
+							who can calculate faster?
+						</p>
+						<span class="project-note">No public build</span>
+					</div>
+					<a
+						href="https://shashu12138.github.io/Yahtezz/"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img src="./Image/yathzee.webp" alt="Yahtzee" />
+						<h3>Yahtzee</h3>
+						<p>
+							The objective of Yahtzee is to get as many points as
+							possible by rolling five dice and getting certain
+							combinations of dice.
+						</p>
+					</a>
+				</div>
+				<p class="gallery-note">
+					Older game projects are published across two itch.io accounts
+					(<a href="https://shashu12138.itch.io" target="_blank" rel="noopener">shashu12138</a>
+					and
+					<a href="https://dragonnight250.itch.io" target="_blank" rel="noopener">dragonnight250</a>).
+				</p>
+			</section>
+
+			<!-- Experience Section -->
+			<section class="experience" id="experience">
+				<h2>Experience</h2>
+				<div class="xp-item">
+					<div class="xp-head">
+						<span class="xp-role"
+							>Web Developer Intern
+							<span class="xp-org">— WebspaceZ, Amsterdam</span></span
+						>
+						<span class="xp-date">Sep 2025 — Feb 2026</span>
+					</div>
+					<ul>
+						<li>
+							Asked back to WebspaceZ for a second internship. I treat that
+							as the most useful reference I have, because it is a judgement
+							made by people who had already seen my work.
+						</li>
+						<li>
+							Built an in-browser image-composition tool for producing
+							promotional material, in HTML, CSS and JavaScript.
+						</li>
+					</ul>
+				</div>
+				<div class="xp-item">
+					<div class="xp-head">
+						<span class="xp-role"
+							>Web Developer Intern
+							<span class="xp-org">— WebspaceZ, Amsterdam</span></span
+						>
+						<span class="xp-date">Oct 2022 — Mar 2023</span>
+					</div>
+					<ul>
+						<li>
+							Designed and built production websites for real clients in
+							HTML, CSS and JavaScript, including the Dutch association of
+							acupuncture physicians (Nederlandse Artsen Acupunctuur
+							Vereniging).
+						</li>
+						<li>
+							Owned both the design and the front-end build of each page,
+							working from the client's brief rather than from a fixed
+							template.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Skills Section with animated progress bars -->
+			<section class="skills" id="skills">
+				<h2>Skills</h2>
+				<div class="skills-container">
+					<!-- Row 1 -->
+					<div class="skill">
+						<h3>C#</h3>
+						<div class="progress-bar-container">
+							<div class="progress-bar" data-width="70%"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<h3>Unity</h3>
+						<div class="progress-bar-container">
+							<div class="progress-bar" data-width="70%"></div>
+						</div>
+					</div>
+
+					<!-- Row 2 -->
+					<div class="skill">
+						<h3>JavaScript</h3>
+						<div class="progress-bar-container">
+							<div class="progress-bar" data-width="80%"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<h3>HTML &amp; CSS</h3>
+						<div class="progress-bar-container">
+							<div class="progress-bar" data-width="80%"></div>
+						</div>
+					</div>
+
+					<!-- Row 3 -->
+					<div class="skill">
+						<h3>Game Design</h3>
+						<div class="progress-bar-container">
+							<div class="progress-bar" data-width="70%"></div>
+						</div>
+					</div>
+					<div class="skill">
+						<h3>Learning Ability</h3>
+						<div class="progress-bar-container">
+							<div class="progress-bar" data-width="95%"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section with integrated form and social media links -->
+			<section class="contact" id="contact">
+				<h2>Contact</h2>
+				<p>
+					Email:
+					<a href="mailto:zejing2001@hotmail.com">zejing2001@hotmail.com</a>
+				</p>
+				<p>
+					CV:
+					<a href="./Ze-Jing-CV-EN.pdf" download="Ze Jing CV"
+						>Download (PDF)</a
+					>
+				</p>
+				<p>
+					GitHub:
+					<a href="https://github.com/ShaShu12138"
+						>github.com/ShaShu12138</a
+					>
+				</p>
+				<p>
+					LinkedIn:
+					<a href="https://www.linkedin.com/in/ze-jing-b87900219/"
+						>linkedin.com/in/ze-jing-b87900219</a
+					>
+				</p>
+				<hr />
+				<p>
+					<a href="https://github.com/ShaShu12138" target="_blank" rel="noopener">
+						<img src="./Image/GitHub Logo.png" alt="GitHub" />
+					</a>
+				</p>
+			</section>
+		</div>
+
+		<!-- External JS libraries for animations and effects -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+		<script src="./Script/main.js"></script>
+	</body>
+</html>

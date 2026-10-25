@@ -1,0 +1,510 @@
+/* Reset styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Container to centralize and align all sections */
+.container {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 200px; /* Default padding for large screens */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Default gap for large screens */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px;
+  position: relative; /* Needed for the pseudo-element positioning */
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Position it right below the text */
+  width: 0;
+  height: 2px;
+  background-color: #FADA5E; /* Naples yellow */
+  transition: width 0.6s ease;
+}
+
+.nav-links a:hover {
+  color: #FADA5E;
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Expands the underline */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 20px 100px; /* Reduce padding for medium screens */
+  }
+  .nav-links {
+    gap: 15px; /* Reduce gap between links */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 20px 50px; /* Further reduce padding for small screens */
+  }
+  .nav-links a {
+    font-size: 1rem; /* Slightly reduce font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically for very small screens */
+    padding: 10px 20px;
+  }
+  .nav-links {
+    flex-direction: column; /* Stack navigation links */
+    gap: 10px; /* Reduce gap between links further */
+  }
+  .nav-links a {
+    font-size: 0.9rem; /* Further reduce font size */
+    padding: 8px; /* Adjust padding */
+  }
+}
+
+  
+
+/* Hero section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  padding-top: 80px; /* Ensures content doesn't overlap with navbar */
+}
+
+.hero-content {
+  z-index: 10;
+  max-width: 800px;
+  padding: 0 20px 100px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero hr {
+  border: 0;
+  height: 1px;
+  width: 80vw; 
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 1em auto; /* 使用 auto 水平居中 */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* 将 hr 水平居中 */
+}
+
+
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Section styles */
+section {
+  padding: 100px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Project gallery layout */
+.project-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.project-item {
+  flex-basis: 30%; /* 宽屏幕时确保四个项目项在一行 */
+  max-width: 300px; /* 确保在大屏幕上不会太大 */
+  text-align: center;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2; /* 强制图片容器为 3:2 比例 */
+  object-fit: cover; /* 超出部分自动隐藏 */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  color: #FADA5E;
+  margin-bottom: 10px;
+}
+
+
+
+/* Skills section with progress bars */
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.skill {
+  width: 45%;
+  text-align: left;
+  margin-bottom: 20px; /* 增加行间距 */
+}
+
+
+.skill h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #FADA5E;
+}
+
+/* Progress bar container with border */
+.progress-bar-container {
+  background-color: #333; /* 背景条颜色 */
+  border: 2px solid #FADA5E; /* 轮廓颜色 */
+  border-radius: 5px;
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* Actual progress bar */
+.progress-bar {
+  background-color: #FADA5E;
+  height: 100%;
+  width: 0; /* 初始宽度为0 */
+  transition: width 1s ease-in-out;
+  border-radius: 3px; /* 内部条的圆角 */
+}
+
+
+/* Contact section styling */
+.contact p {
+  color: #ccc;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.contact a {
+  color: #FADA5E;
+}
+
+.contact a:hover {
+  color: #fff;
+}
+
+.contact hr{
+  border: 0;
+  height: 1px;
+  width: 80vw; 
+  background: linear-gradient(to right, transparent, #ccc, transparent);
+  margin: 1em auto; /* 使用 auto 水平居中 */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); /* 将 hr 水平居中 */
+}
+
+.contact img{
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+
+
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Additions: hero contrast, notes, experience ---------- */
+
+/* Hero grows with its content instead of clipping at 100vh */
+.hero {
+  height: auto;
+  min-height: 100vh;
+  padding-bottom: 90px;
+}
+
+.hero-image {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.45) 42%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+.hero .tagline {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.hero .hero-sub {
+  font-size: 1.05rem;
+  color: #dcdcdc;
+}
+
+/* Project card footnote */
+.project-note {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+.gallery-note {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.gallery-note a {
+  color: #fada5e;
+}
+
+/* Experience */
+.experience {
+  max-width: 900px;
+}
+
+.xp-item {
+  border-left: 2px solid #fada5e;
+  padding-left: 22px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.xp-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.xp-role {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.xp-org {
+  color: #fada5e;
+  font-weight: normal;
+}
+
+.xp-date {
+  color: #8a8a8a;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.xp-item ul {
+  list-style: none;
+}
+
+.xp-item li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  color: #ccc;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.xp-item li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #fada5e;
+}
+
+/* Tablet: two cards per row */
+@media (max-width: 900px) {
+  .project-item {
+    flex-basis: 46%;
+    max-width: none;
+  }
+
+  section {
+    padding: 70px 28px;
+  }
+}
+
+/* Phone: one card per row, stacked nav */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 12px;
+  }
+
+  .logo {
+    width: 100%;
+    font-size: 1.35rem;
+    text-align: center;
+  }
+
+  .navbar nav {
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px 4px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  section {
+    padding: 55px 20px;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .project-item {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .skill {
+    width: 100%;
+  }
+
+  .hero {
+    padding-top: 150px;
+  }
+
+  .hero .tagline {
+    font-size: 1.15rem;
+  }
+
+  .hero .hero-sub {
+    font-size: 0.95rem;
+  }
+
+  .xp-item {
+    padding-left: 14px;
+  }
+}
+
+/* Fix: hr was 80vw wide inside a narrower column, so it overflowed to one side */
+.hero hr,
+.contact hr {
+  width: min(80vw, 100%);
+  left: auto;
+  transform: none;
+}
