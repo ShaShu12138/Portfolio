@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Space Invaders — Ze Jing</title><link rel="icon" href="img/space-invaders.svg"><link rel="stylesheet" href="style.css"><script src="../vendor/p5.min.js"></script><script src="../vendor/p5.sound.min.js"></script></head>
+<body>
+<header><a href="../../#projects">← Portfolio</a><h1>Space Invaders</h1><p>Arrow keys to move · Space to fire · or hold the buttons below.</p></header>
+<div class="toolbar"><button id="start" disabled>Loading…</button><button id="restart">Restart</button><button id="sound" aria-pressed="false">Sound: on</button></div>
+<main aria-label="Space Invaders game"></main>
+<div class="controls" aria-label="Touch controls"><button data-key="37" aria-label="Move left">◀</button><button data-key="32">Fire</button><button data-key="39" aria-label="Move right">▶</button></div>
+<form id="score-form" hidden><label>Your name <input id="player-name" maxlength="20" value="Player" required></label><button>Save score</button></form>
+<p id="message" role="status"></p><aside><h2>High scores on this device</h2><p id="highScore">No scores yet.</p></aside>
+<script src="sketch.js"></script><script src="preload.js"></script><script src="player.js"></script><script src="enemy.js"></script><script src="bonus.js"></script><script src="shield.js"></script><script src="playerBullets.js"></script><script src="enemyBullets.js"></script><script src="highScore.js"></script><script src="controls.js"></script>
+</body></html>

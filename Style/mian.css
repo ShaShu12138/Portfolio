@@ -347,16 +347,6 @@ html {
   color: #dcdcdc;
 }
 
-/* Project card footnote */
-.project-note {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #8a8a8a;
-}
-
 .gallery-note {
   margin-top: 10px;
   font-size: 0.95rem;
@@ -509,26 +499,22 @@ html {
   transform: none;
 }
 
-/* Trust Protocol card: two explicit actions instead of one whole-card link */
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px 18px;
-  justify-content: center;
-  margin: 12px 0 0 0;
+section { scroll-margin-top: 105px; }
+a:focus-visible { outline: 3px solid #fada5e; outline-offset: 5px; }
+.skill p { text-align: left; }
+.contact a { overflow-wrap: anywhere; }
+.nav-links a { display: inline-block; }
+@media (min-width:601px) and (max-width:1100px) {
+  .navbar { padding: 16px 24px; }
+  .nav-links { gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+  .nav-links a { padding: 8px; }
 }
-
-.project-links a {
-  color: #fada5e;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
+@media (max-width:600px) {
+  section { scroll-margin-top: 130px; }
+  .nav-links a { min-height: 36px; }
 }
-
-.project-links a:hover,
-.project-links a:focus-visible {
-  color: #ffffff;
-  border-bottom-color: #fada5e;
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .project-item:hover { transform: none; }
 }
