@@ -9,7 +9,7 @@ class Enemy{
         this.image = gameManager.getImage(this.selectedImage);
         this.imageSize = canvasHeight - (tileSize * tileGrid.height) - 100;
     }
-    
+
     attack(){
         player.hp -= this.dmg;
         if(player.hp <= 0){

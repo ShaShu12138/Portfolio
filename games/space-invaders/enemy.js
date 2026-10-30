@@ -105,4 +105,3 @@ class Enemy {
     enemy.cooldown -= 1;
   }
 }
-

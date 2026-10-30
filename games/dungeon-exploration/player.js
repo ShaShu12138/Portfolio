@@ -39,7 +39,7 @@ class Player {
             }
             this.gold = Number(this.gold) + 2;
         }
-        
+
         switch (color) {
             case 'redGem':
                 enemy.hp -= number * this.redGemDmg;

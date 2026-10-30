@@ -107,7 +107,7 @@ body {
   }
 }
 
-  
+
 
 /* Hero section */
 .hero {
@@ -139,7 +139,7 @@ body {
 .hero hr {
   border: 0;
   height: 1px;
-  width: 80vw; 
+  width: 80vw;
   background: linear-gradient(to right, transparent, #ccc, transparent);
   margin: 1em auto; /* 使用 auto 水平居中 */
   position: relative;
@@ -288,7 +288,7 @@ a {
 .contact hr{
   border: 0;
   height: 1px;
-  width: 80vw; 
+  width: 80vw;
   background: linear-gradient(to right, transparent, #ccc, transparent);
   margin: 1em auto; /* 使用 auto 水平居中 */
   position: relative;

@@ -70,7 +70,7 @@ class Tile {
         if (x < 0 || x >= this.width || y < 0 || y >= this.height) {
             return null;
         }
-        
+
         // Return the tile at the given index
         return this.tiles[x][y];
     }
@@ -232,14 +232,14 @@ class Tile {
             for (let y = 0; y < this.height; y++) {
                 if (this.tiles[x][y].match) {
                     let color = this.tiles[x][y].color;
-    
+
                     // Increment the count for the eliminated gem's color
                     if (eliminatedGems[color]) {
                         eliminatedGems[color]++;
                     } else {
                         eliminatedGems[color] = 1;
                     }
-    
+
                     // Make the tile invisible and reset its match status
                     this.tiles[x][y].visible = false;
                     this.tiles[x][y].match = false;
@@ -247,13 +247,13 @@ class Tile {
                 }
             }
         }
-    
+
         // Log information about eliminated gems
         for (let color in eliminatedGems) {
             console.log(`Eliminated ${eliminatedGems[color]} ${color} gems`);
             player.attack(eliminatedGems[color],color);// Player attack
         }
-    
+
         return tilesEliminated; // Return whether any tiles were eliminated
     }
 
