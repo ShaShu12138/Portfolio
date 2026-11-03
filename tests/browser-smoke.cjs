@@ -40,10 +40,10 @@ const base=process.env.PORTFOLIO_TEST_URL||'http://127.0.0.1:5190';
   results.push(`Check Man ${mobile?'touch':'desktop'}: piece placement/removal, cost, invalid solution, difficulty, layout`);
   await p.goto(base+'/');assert.equal(await p.getByText('No public build',{exact:true}).count(),0);
   const images=await p.evaluate(async()=>{const imgs=[...document.images];imgs.forEach(i=>i.loading='eager');await Promise.all(imgs.map(i=>i.decode().catch(()=>{})));return imgs.filter(i=>!i.naturalWidth).map(i=>i.src);});assert.deepEqual(images,[]);
-  assert.equal(await p.locator('.project-item').count(),9);
-  assert.equal(await p.locator('a.project-item').count(),9);
+  assert.equal(await p.locator('.project-item').count(),10);
+  assert.equal(await p.locator('a.project-item').count(),10);
   assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-  results.push(`Portfolio ${mobile?'phone':'desktop'}: nine linked cards, no overflow`);
+  results.push(`Portfolio ${mobile?'phone':'desktop'}: ten linked cards, no overflow`);
   if(errors.length)throw Error(errors.join('\n'));
   await context.close();
  }
