@@ -1,306 +1,193 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ze Jing — Software Developer · Web &amp; Games</title>
-		<meta
-			name="description"
-			content="Ze Jing's software and game development portfolio. Play browser games, explore development experience, and download a CV. Available for a graduation internship from February 2027."
-		/>
-		<link rel="icon" href="./favicon.ico" />
-		<link rel="stylesheet" href="./Style/mian.css" />
-	</head>
-	<body>
-		<!-- Main container for all sections -->
-		<div class="container">
-			<!-- Navbar for easy navigation across tabs -->
-			<header class="navbar">
-				<h1 class="logo">Ze Jing</h1>
-				<nav>
-					<ul class="nav-links">
-						<li>
-							<a href="#home">Home</a>
-						</li>
-						<li>
-							<a href="#about">About</a>
-						</li>
-						<li>
-							<a href="#projects">Projects</a>
-						</li>
-						<li>
-							<a href="#experience">Experience</a>
-						</li>
-						<li>
-							<a href="#skills">Skills</a>
-						</li>
-						<li>
-							<a href="#contact">Contact</a>
-						</li>
-					</ul>
-				</nav>
-			</header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ze Jing, game and software developer in Amsterdam.">
+  <title>Ze Jing — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<a class="skip" href="#library">Skip to projects</a>
+<header class="header">
+  <a class="signature" href="#home" aria-label="Ze Jing, home">Z<span>J</span><i>.</i></a>
+  <nav aria-label="Main navigation">
+    <a href="#library">Projects</a><a href="#about">About</a>
+  </nav>
+  <div class="reading-progress" aria-hidden="true"></div>
+</header>
+<main>
+  <section class="hero" id="home" aria-labelledby="intro">
+    <div class="hero-inner wrap">
+      <div class="intro">
+        <p class="availability"><i></i> Available for a graduation internship · Feb 2027</p>
+        <h1 id="intro">Hi, I’m<br>Ze Jing<span>.</span></h1>
+        <p class="role">I’m a <strong><button type="button" id="role-word" data-role="game" aria-label="Switch profession">game developer</button></strong><i class="caret"></i></p>
+        <p class="sr-only">I’m a game, software and web developer.</p>
+        <p class="intro-note">I study game development in Amsterdam. I make games about decisions, and build tools people can use.</p>
+      </div>
+      <div class="mascot-scene">
+        <svg class="scene-art" viewBox="0 0 560 460" aria-hidden="true">
+          <defs>
+            <pattern id="paper-dots" width="13" height="13" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#20362c" opacity=".2"/></pattern>
+          </defs>
+          <path d="M93 114C145 30 346 21 439 90s84 174-21 227c-92 46-298 25-338-49-28-52-20-101 13-154Z" fill="#fbc441"/>
+          <path d="M93 114C145 30 346 21 439 90s84 174-21 227c-92 46-298 25-338-49-28-52-20-101 13-154Z" fill="url(#paper-dots)"/>
+          <path d="M31 353c112 4 230-32 322-17 64 10 98 27 166 17m-456 18c74-1 102-9 144-17m197 12c37 8 63 10 89 4" fill="none" stroke="#20362c" stroke-width="2" stroke-linecap="round"/>
+          <path class="spark" d="M114 110q11 26 33 30-23 6-29 34-4-26-25-31 20-8 21-33Z" fill="#fffbec" stroke="#20362c" stroke-width="3"/>
+          <path class="spark spark-late" d="M459 195v37m-18-19h37M407 76v23m-11-11h23" stroke="#20362c" stroke-width="3" stroke-linecap="round"/>
+          <path d="M44 310l14-18 13 14m441 0-7 10-8-4" fill="none" stroke="#20362c" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="mascot-travel">
+          <button class="mascot" type="button" aria-label="Robot">
+            <svg viewBox="0 0 330 300" aria-hidden="true">
+              <defs><pattern id="screen-lines" width="4" height="5" patternUnits="userSpaceOnUse"><path d="M0 4H4" stroke="#f4f0d7" opacity=".16"/></pattern></defs>
+              <ellipse class="robot-shadow" cx="160" cy="268" rx="106" ry="13" fill="#20362c" opacity=".2"/>
+              <g class="robot-body">
+                <path d="M104 205q-27 11-52-8-22-16-7-32m230 8q25 8 32-9" fill="none" stroke="#20362c" stroke-width="6" stroke-linecap="round"/>
+                <path d="M152 63l-12-31 20-13" fill="none" stroke="#20362c" stroke-width="6" stroke-linecap="round"/><circle cx="162" cy="17" r="10" fill="#ea663f" stroke="#20362c" stroke-width="5"/>
+                <path d="M246 64l37 19 12 90-32 35-36-18Z" fill="#e76b43" stroke="#20362c" stroke-width="7" stroke-linejoin="round"/>
+                <path d="m275 115 10 5m-8 9 10 5m-8 9 10 5" fill="none" stroke="#20362c" stroke-width="3" stroke-linecap="round"/>
+                <rect x="61" y="61" width="206" height="150" rx="26" fill="#fff7df" stroke="#20362c" stroke-width="7"/>
+                <rect x="76" y="77" width="175" height="105" rx="16" fill="#20362c"/>
+                <rect x="76" y="77" width="175" height="105" rx="16" fill="url(#screen-lines)"/>
+                <g class="robot-face" stroke="#fbc441" stroke-width="6" stroke-linecap="round" fill="none">
+                  <g class="eyes"><path d="M110 122q9-13 18 0m72 0q9-13 18 0"/></g>
+                  <g class="robot-heart" fill="#ea8866" stroke="none">
+                    <path d="M102 115c-9-14 10-21 17-9 7-12 26-5 17 9l-17 18Z"/>
+                    <path d="M187 115c-9-14 10-21 17-9 7-12 26-5 17 9l-17 18Z"/>
+                  </g>
+                  <g class="robot-code" stroke="#9ac7ec" stroke-width="5" stroke-linejoin="round">
+                    <path d="m120 110-13 14 13 14m89-28 13 14-13 14m-38-30-14 36"/>
+                  </g>
+                  <path class="mouth" d="M151 140q13 16 26 0"/><path class="surprise" d="M159 142a6 8 0 1 0 12 0a6 8 0 1 0-12 0"/>
+                </g>
+                <circle cx="89" cy="195" r="4" fill="#ea663f"/><path d="M216 195h20" stroke="#20362c" stroke-width="4" stroke-linecap="round"/>
+                <path d="m100 210 13 21h102l15-21" fill="#e76b43" stroke="#20362c" stroke-width="6" stroke-linejoin="round"/>
+                <g class="wheel" style="--wheel-x:117px"><circle cx="117" cy="239" r="23" fill="#20362c"/><circle cx="117" cy="239" r="13" fill="#fff7df"/><path d="M117 229v20m-10-10h20" stroke="#20362c" stroke-width="3"/></g>
+                <g class="wheel" style="--wheel-x:213px"><circle cx="213" cy="239" r="23" fill="#20362c"/><circle cx="213" cy="239" r="13" fill="#fff7df"/><path d="M213 229v20m-10-10h20" stroke="#20362c" stroke-width="3"/></g>
+              </g>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <nav class="jump-links wrap" aria-label="Explore the portfolio">
+      <a href="#library"><span>01</span> Projects <b>↘</b></a>
+      <a href="#about"><span>02</span> About me <b>↘</b></a>
+    </nav>
+  </section>
 
-			<!-- Hero Section with a large intro and interactive animations -->
-			<div class="hero" id="home">
-				<img
-					src="./Image/hero.webp"
-					alt=""
-					class="hero-image"
-					fetchpriority="high"
-				/>
-				<div class="hero-overlay"></div>
-				<div class="hero-content">
-					<h2>Ze Jing</h2>
-					<p class="tagline">
-						Software development. Games with a purpose.
-					</p>
-					<p class="hero-sub">
-						Game Development student at Amsterdam University of Applied
-						Sciences &middot; looking for a graduation internship from
-						February 2027.
-					</p>
-					<hr />
-				</div>
-			</div>
 
-			<!-- About Section with an in-depth bio and background -->
-			<section class="about" id="about">
-				<h2>About Me</h2>
-				<p>
-					I'm Ze Jing, a final-year HBO-ICT student in Game Development at Amsterdam
-					University of Applied Sciences. I develop web applications and games,
-					with experience taking independent projects from concept to delivery.
-				</p>
-				<p>
-					I want to apply game development skills to real-world challenges.
-					My current project, Trust Protocol, explores bank-impersonation fraud
-					through an interactive desktop simulation. I am looking for a software
-					development graduation internship from February 2027.
-				</p>
-			</section>
+  <section id="library" class="library-section">
+    <div class="wrap">
+      <div class="arcade-heading">
+        <h2 class="chapter-title reveal"><span>01</span> Projects</h2>
+        <button type="button" class="shelf-cat" aria-label="Cat">
+          <svg viewBox="0 0 220 150" aria-hidden="true">
+            <path class="cat-tail" d="M146 107c66 8 65-59 34-53-13 3-12 19 0 18" fill="none" stroke="#43275b" stroke-width="12" stroke-linecap="round"/>
+            <path class="cat-body" d="M45 121c0-37 16-65 49-65 38 0 58 29 58 65Z" fill="#f2be58" stroke="#43275b" stroke-width="4"/>
+            <g class="cat-head">
+              <path d="m44 65 1-42 31 15c12-3 23-3 33 0l30-15 3 42c17 40-14 50-50 50S27 102 44 65Z" fill="#fff3d6" stroke="#43275b" stroke-width="4" stroke-linejoin="round"/>
+              <path d="m52 36 17 9-17 9Zm80 0-17 9 17 9Z" fill="#e18d76"/>
+              <g class="cat-eyes" fill="#43275b"><ellipse cx="71" cy="73" rx="5" ry="8"/><ellipse cx="114" cy="73" rx="5" ry="8"/></g>
+              <path d="m87 86 5 4 5-4m-5 4c0 7-8 9-11 5m11-5c0 7 8 9 11 5" fill="none" stroke="#43275b" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="m42 83-20-4m20 12-22 3m123-11 20-4m-20 12 22 3" fill="none" stroke="#43275b" stroke-width="2"/>
+            </g>
+            <path class="cat-paw paw-left" d="M49 111v25c0 12 20 12 20 0v-25" fill="#fff3d6" stroke="#43275b" stroke-width="4" stroke-linecap="round"/>
+            <path class="cat-paw paw-right" d="M117 111v25c0 12 20 12 20 0v-25" fill="#fff3d6" stroke="#43275b" stroke-width="4" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="library-toolbar">
+        <div class="filters" role="group" aria-label="Filter projects"><button class="active" data-filter="all" aria-pressed="true">All</button><button data-filter="narrative" aria-pressed="false">Narrative</button><button data-filter="puzzle" aria-pressed="false">Puzzle</button><button data-filter="action" aria-pressed="false">Action</button></div>
+      </div>
+      <div class="library-grid" id="project-grid"></div>
+      <p class="result-status" id="result-status" aria-live="polite"></p>
+    </div>
+  </section>
 
-			<!-- Projects Section showcasing multiple project entries -->
-			<section class="projects" id="projects">
-				<h2>Projects</h2>
-				<div class="project-gallery">
-					<a
-						href="https://shashu12138.github.io/Trust-Protocol/"
-						target="_blank"
-						rel="noopener"
-						class="project-item"
-					>
-						<img
-							src="./Image/trust-protocol.webp"
-							alt="Trust Protocol"
-						/>
-						<h3>Trust Protocol</h3>
-						<p>
-							A desktop-style serious game about bank-impersonation fraud.
-							Incoming mail, a bank website and a phone call all want the
-							same decision, and the player has to work out which one is
-							real. TypeScript, Lit, one runtime dependency.
-						</p>
-					</a>
-					<a
-						href="https://shashu12138.itch.io/cleared-for-release"
-						target="_blank"
-						rel="noopener"
-						class="project-item"
-					>
-						<img
-							src="./Image/cleared-for-release.png"
-							alt="Cleared for Release: a black-and-white censored document"
-							loading="lazy"
-						/>
-						<h3>Cleared for Release</h3>
-						<p>
-							A short black-and-white narrative game about a censorship clerk
-							in wartime Berlin. Redact reports and private letters, and
-							discover the human cost of following orders. Made for 1-BIT JAM 15.
-						</p>
-					</a>
-					<a
-						href="https://shashu12138.itch.io/adventure-of-the-ball"
-						target="_blank"
-						rel="noopener"
-						class="project-item"
-					>
-						<img
-							src="./Image/adventure-ball.webp"
-							alt="Adventure Of The Ball"
-						/>
-						<h3>Adventure Of The Ball</h3>
-						<p>Use the ball to challenge the giant stone man.</p>
-					</a>
-					<a
-						href="https://dragonnight250.itch.io/danmaku-rhapsody"
-						target="_blank"
-						rel="noopener"
-						class="project-item"
-					>
-						<img src="./Image/danmaku.webp" alt="Danmaku Rhapsody" />
-						<h3>Danmaku Rhapsody</h3>
-						<p>
-							A mesmerizing fan-made bullet hell game inspired by the
-							renowned TouHou Project.
-						</p>
-					</a>
-					<a href="./games/dungeon-exploration/" target="_blank" rel="noopener" class="project-item">
-						<img src="./Image/dungeon.webp" alt="Dungeon exploration" />
-						<h3>Dungeon exploration</h3>
-						<p>
-							In the dim dungeon, you found a lot of treasure. But on your
-							way back, monsters blocked your way. The gem in your hand
-							began to glow...
-						</p>
-					</a>
-					<a
-						href="https://dragonnight250.itch.io/chefs-quest-the-last-customer-20"
-						target="_blank"
-						rel="noopener"
-						class="project-item"
-					>
-						<img src="./Image/chefs-quest.webp" alt="Chef's quest" />
-						<h3>Chef's quest: The last customer</h3>
-						<p>
-							Step into the heat of the kitchen and face the ultimate
-							challenge: an impossible-to-please customer!
-						</p>
-					</a>
-					<a href="./games/check-man/" target="_blank" rel="noopener" class="project-item">
-						<img src="./Image/checkman.webp" alt="Check Man" />
-						<h3>Check Man</h3>
-						<p>
-							Cover every target with chess attacks at the lowest piece cost.
-							A browser adaptation of my C# puzzle game, playable with mouse or touch.
-						</p>
-					</a>
-					<a href="./games/space-invaders/" target="_blank" rel="noopener" class="project-item">
-						<img src="./Image/space-invaders.webp" alt="Space Invaders gameplay" loading="lazy" />
-						<h3>Space Invaders</h3><p>Defend your shields, dodge enemy fire and survive escalating waves. Keyboard and touch controls.</p>
-					</a>
-					<a href="https://shashu12138.github.io/2048-game/" target="_blank" rel="noopener" class="project-item">
-						<img src="./Image/2048.webp" alt="2048 number puzzle" loading="lazy" />
-						<h3>2048</h3><p>Slide and combine matching numbers. Plan your moves and work towards the 2048 tile.</p>
-					</a>
-					<a
-						href="https://shashu12138.github.io/Yahtezz/"
-						target="_blank"
-						rel="noopener"
-						class="project-item"
-					>
-						<img src="./Image/yathzee.webp" alt="Yahtzee" />
-						<h3>Yahtzee</h3>
-						<p>
-							The objective of Yahtzee is to get as many points as
-							possible by rolling five dice and getting certain
-							combinations of dice.
-						</p>
-					</a>
-				</div>
-				<p class="gallery-note">
-					Older game projects are published across two itch.io accounts
-					(<a href="https://shashu12138.itch.io" target="_blank" rel="noopener">shashu12138</a>
-					and
-					<a href="https://dragonnight250.itch.io" target="_blank" rel="noopener">dragonnight250</a>).
-				</p>
-			</section>
-
-			<!-- Experience Section -->
-			<section class="experience" id="experience">
-				<h2>Experience</h2>
-				<div class="xp-item">
-					<div class="xp-head">
-						<span class="xp-role"
-							>Web Developer Intern
-							<span class="xp-org">— WebspaceZ, Amsterdam</span></span
-						>
-						<span class="xp-date">Sep 2025 — Feb 2026</span>
-					</div>
-					<ul>
-						<li>
-							Independently developed and delivered an online promotional-image editor,
-							now in use, for shop owners without Photoshop experience.
-						</li>
-						<li>
-							Integrated an AI image-generation API so users could create product imagery
-							and incorporate it into promotional designs in one workflow.
-						</li>
-					</ul>
-				</div>
-				<div class="xp-item">
-					<div class="xp-head"><span class="xp-role">Test Engineer <span class="xp-org">— PowerColor</span></span><span class="xp-date">Oct 2023 — Jun 2024</span></div>
-					<ul><li>Conducted functional and performance testing of graphics hardware using diagnostic and benchmarking tools.</li><li>Identified and documented issues affecting display output, power consumption, thermal behaviour and acoustics.</li></ul>
-				</div>
-				<div class="xp-item">
-					<div class="xp-head">
-						<span class="xp-role"
-							>Web Developer Intern
-							<span class="xp-org">— WebspaceZ, Amsterdam</span></span
-						>
-						<span class="xp-date">Oct 2022 — Mar 2023</span>
-					</div>
-					<ul>
-						<li>
-							Designed and built production websites for real clients in
-							HTML, CSS and JavaScript, including the Dutch association of
-							acupuncture physicians (Nederlandse Artsen Acupunctuur
-							Vereniging).
-						</li>
-						<li>
-							Owned both the design and the front-end build of each page,
-							working from the client's brief rather than from a fixed
-							template.
-						</li>
-					</ul>
-				</div>
-			</section>
-
-			<!-- Skills reflect the current CV, without arbitrary percentage ratings. -->
-			<section class="skills" id="skills">
-				<h2>Skills</h2>
-				<div class="skills-container">
-					<div class="skill"><h3>Development</h3><p>C#, JavaScript, HTML, CSS, Python</p></div>
-					<div class="skill"><h3>Tools</h3><p>Unity, Godot, Git</p></div>
-					<div class="skill"><h3>Basic knowledge</h3><p>PHP, MySQL, Lit, TypeScript</p></div>
-				</div>
-			</section>
-
-			<!-- Contact Section with integrated form and social media links -->
-			<section class="contact" id="contact">
-				<h2>Contact</h2>
-				<p>
-					Email:
-					<a href="mailto:zejing2001@hotmail.com">zejing2001@hotmail.com</a>
-				</p>
-				<p>
-					CV:
-					<a href="./Ze-Jing-CV-EN.pdf" download="Ze Jing CV"
-						>Download (PDF)</a
-					>
-				</p>
-				<p>
-					GitHub:
-					<a href="https://github.com/ShaShu12138"
-						>github.com/ShaShu12138</a
-					>
-				</p>
-				<p>
-					LinkedIn:
-					<a href="https://www.linkedin.com/in/ze-jing-b87900219/"
-						>linkedin.com/in/ze-jing-b87900219</a
-					>
-				</p>
-				<hr />
-				<p>
-					<a href="https://github.com/ShaShu12138" target="_blank" rel="noopener">
-						<img src="./Image/GitHub Logo.png" alt="GitHub" />
-					</a>
-				</p>
-			</section>
-		</div>
-
-		<script src="./Script/main.js"></script>
-	</body>
+  <section id="about" class="about-section">
+    <div class="wrap about-inner">
+      <div class="about-heading"><h2 class="chapter-title reveal"><span>02</span> About me</h2>
+        <button type="button" class="little-plant" aria-label="Flower" aria-pressed="false">
+          <svg viewBox="0 0 145 155" aria-hidden="true">
+            <g class="plant-leaves">
+              <path d="M73 105V48m0 41C24 88 26 58 37 61c22 0 36 17 36 28m0-16c44 0 50-36 35-31-18 4-31 15-35 31" fill="#517c51" stroke="#20362c" stroke-width="3" stroke-linejoin="round"/>
+              <g class="plant-flower" fill="#e76b43" stroke="#20362c" stroke-width="2">
+                <circle cx="73" cy="30" r="12"/><circle cx="89" cy="42" r="12"/><circle cx="82" cy="61" r="12"/><circle cx="62" cy="60" r="12"/><circle cx="56" cy="41" r="12"/><circle cx="73" cy="45" r="10" fill="#fbc441"/>
+              </g>
+              <path class="plant-bud" d="M73 53c-20-3-17-27-1-26 17 0 20 24 1 26Z" fill="#e76b43" stroke="#20362c" stroke-width="3"/>
+            </g>
+            <path d="m43 102 8 39h45l8-39Z" fill="#e6a270" stroke="#20362c" stroke-width="3"/><path d="M39 100h69v10H39Z" fill="#f8d8a2" stroke="#20362c" stroke-width="3"/>
+            <path d="M63 122v2m22-2v2m-16 6q6 5 11 0" fill="none" stroke="#20362c" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="about-columns">
+        <div class="about-letter">
+          <p class="about-lead">I’m Ze Jing, a final-year Game Development student at Amsterdam University of Applied Sciences.</p>
+          <p>Check Man started as a C# chess puzzle. The browser version keeps the original rules: a piece still has a cost, blockers still get in the way, and the puzzle only works if every target can be reached.</p>
+          <p>In Trust Protocol, I built a desktop where an email, a phone call, and a website all compete for your attention. One design question was what the player could see before being asked to make a choice. I kept the window and call logic separate from the interface so I could test what happens when a window closes or a call is missed.</p>
+          <div class="about-contact">
+            <p>I’m looking for a graduation internship starting in February 2027.</p>
+            <a class="cv" href="assets/Ze-Jing-CV-EN.pdf" download>Download CV ↓</a>
+            <a class="about-email" href="mailto:zejing2001@hotmail.com">Email me ↗</a>
+          </div>
+        </div>
+        <div class="experience-column">
+          <h3>What I did at work</h3>
+          <ol class="experience">
+            <li>
+              <details open>
+                <summary><time>2025–26</time><span><b>WebspaceZ</b><small>Web developer intern</small></span></summary>
+                <p>I built and delivered a promotional-image editor for shop owners who don’t use Photoshop. They can generate a product image and use it in a design in the same browser tool.</p>
+                <button type="button" class="experience-project" data-project="editor">About the image editor ↗</button>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><time>2023–24</time><span><b>PowerColor</b><small>Test engineer</small></span></summary>
+                <p>I ran diagnostics and benchmarks on graphics hardware, then documented issues with display output, power, heat, and noise.</p>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary><time>2022–23</time><span><b>WebspaceZ</b><small>Web developer intern</small></span></summary>
+                <p>I designed and built client websites in HTML, CSS, and JavaScript. One was for the Dutch association of acupuncture physicians. I worked from the client’s brief and handled both the design and the front-end build.</p>
+              </details>
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="toolbox-area">
+        <div class="toolbox-intro"><h3>Things I work with</h3><p id="tool-note" aria-live="polite">C# — the language behind my original Check Man puzzle.</p><button id="reset-stickers" type="button" aria-label="Reset toolbox">↺</button></div>
+        <div class="sticker-board" aria-label="Draggable toolbox stickers">
+          <button class="tool-sticker" type="button" data-tool="csharp" style="--x:5;--y:12;--angle:-9deg">C<span>#</span></button>
+          <button class="tool-sticker" type="button" data-tool="unity" style="--x:38;--y:8;--angle:7deg">Unity<span aria-hidden="true">◇</span></button>
+          <button class="tool-sticker" type="button" data-tool="godot" style="--x:68;--y:17;--angle:-6deg"><span aria-hidden="true">⚙</span> Godot</button>
+          <button class="tool-sticker" type="button" data-tool="javascript" style="--x:12;--y:58;--angle:5deg">JS</button>
+          <button class="tool-sticker" type="button" data-tool="python" style="--x:43;--y:60;--angle:-5deg">Python</button>
+          <button class="tool-sticker" type="button" data-tool="git" style="--x:74;--y:60;--angle:10deg">git<span aria-hidden="true">⌘</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <button type="button" class="paper-plane" aria-label="Paper airplane">
+    <svg viewBox="0 0 180 100" aria-hidden="true">
+      <path d="M12 87c32 8 44-4 37-17-8-12-35-4-26 5 10 10 27-4 44-15" fill="none" stroke="#fbc441" stroke-width="2" stroke-dasharray="4 6"/>
+      <g class="plane-body"><path d="m65 38 103-24-44 71-20-32Z" fill="#fff3d6" stroke="#20362c" stroke-width="3" stroke-linejoin="round"/><path d="m104 53 64-39-77 50-5-15" fill="#fbc441" stroke="#20362c" stroke-width="2" stroke-linejoin="round"/></g>
+    </svg>
+  </button>
+  <div class="wrap footer-inner">
+    <a class="footer-email" href="mailto:zejing2001@hotmail.com">Say hello <span>↗</span></a>
+    <div><a href="https://github.com/ShaShu12138" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/ze-jing-b87900219/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="#home">Back to top ↑</a></div>
+  </div>
+</footer>
+<dialog id="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close project details">✕</button><div id="dialog-content"></div></dialog>
+</body>
 </html>
+
