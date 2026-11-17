@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ze Jing — Software Developer · Web &amp; Games</title>
+		<meta
+			name="description"
+			content="Ze Jing's software and game development portfolio. Play browser games, explore development experience, and download a CV. Available for a graduation internship from February 2027."
+		/>
+		<link rel="icon" href="./favicon.ico" />
+		<link rel="stylesheet" href="./Style/mian.css" />
+	</head>
+	<body>
+		<!-- Main container for all sections -->
+		<div class="container">
+			<!-- Navbar for easy navigation across tabs -->
+			<header class="navbar">
+				<h1 class="logo">Ze Jing</h1>
+				<nav>
+					<ul class="nav-links">
+						<li>
+							<a href="#home">Home</a>
+						</li>
+						<li>
+							<a href="#about">About</a>
+						</li>
+						<li>
+							<a href="#projects">Projects</a>
+						</li>
+						<li>
+							<a href="#experience">Experience</a>
+						</li>
+						<li>
+							<a href="#skills">Skills</a>
+						</li>
+						<li>
+							<a href="#contact">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Hero Section with a large intro and interactive animations -->
+			<div class="hero" id="home">
+				<img
+					src="./Image/hero.webp"
+					alt=""
+					class="hero-image"
+					fetchpriority="high"
+				/>
+				<div class="hero-overlay"></div>
+				<div class="hero-content">
+					<h2>Ze Jing</h2>
+					<p class="tagline">
+						Software development. Games with a purpose.
+					</p>
+					<p class="hero-sub">
+						Game Development student at Amsterdam University of Applied
+						Sciences &middot; looking for a graduation internship from
+						February 2027.
+					</p>
+					<hr />
+				</div>
+			</div>
+
+			<!-- About Section with an in-depth bio and background -->
+			<section class="about" id="about">
+				<h2>About Me</h2>
+				<p>
+					I'm Ze Jing, a final-year HBO-ICT student in Game Development at Amsterdam
+					University of Applied Sciences. I develop web applications and games,
+					with experience taking independent projects from concept to delivery.
+				</p>
+				<p>
+					I want to apply game development skills to real-world challenges.
+					My current project, Trust Protocol, explores bank-impersonation fraud
+					through an interactive desktop simulation. I am looking for a software
+					development graduation internship from February 2027.
+				</p>
+			</section>
+
+			<!-- Projects Section showcasing multiple project entries -->
+			<section class="projects" id="projects">
+				<h2>Projects</h2>
+				<div class="project-gallery">
+					<a
+						href="https://shashu12138.github.io/Trust-Protocol/"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img
+							src="./Image/trust-protocol.webp"
+							alt="Trust Protocol"
+						/>
+						<h3>Trust Protocol</h3>
+						<p>
+							A desktop-style serious game about bank-impersonation fraud.
+							Incoming mail, a bank website and a phone call all want the
+							same decision, and the player has to work out which one is
+							real. TypeScript, Lit, one runtime dependency.
+						</p>
+					</a>
+					<a
+						href="https://shashu12138.itch.io/cleared-for-release"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img
+							src="./Image/cleared-for-release.png"
+							alt="Cleared for Release: a black-and-white censored document"
+							loading="lazy"
+						/>
+						<h3>Cleared for Release</h3>
+						<p>
+							A short black-and-white narrative game about a censorship clerk
+							in wartime Berlin. Redact reports and private letters, and
+							discover the human cost of following orders. Made for 1-BIT JAM 15.
+						</p>
+					</a>
+					<a
+						href="https://shashu12138.itch.io/adventure-of-the-ball"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img
+							src="./Image/adventure-ball.webp"
+							alt="Adventure Of The Ball"
+						/>
+						<h3>Adventure Of The Ball</h3>
+						<p>Use the ball to challenge the giant stone man.</p>
+					</a>
+					<a
+						href="https://dragonnight250.itch.io/danmaku-rhapsody"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img src="./Image/danmaku.webp" alt="Danmaku Rhapsody" />
+						<h3>Danmaku Rhapsody</h3>
+						<p>
+							A mesmerizing fan-made bullet hell game inspired by the
+							renowned TouHou Project.
+						</p>
+					</a>
+					<a href="./games/dungeon-exploration/" target="_blank" rel="noopener" class="project-item">
+						<img src="./Image/dungeon.webp" alt="Dungeon exploration" />
+						<h3>Dungeon exploration</h3>
+						<p>
+							In the dim dungeon, you found a lot of treasure. But on your
+							way back, monsters blocked your way. The gem in your hand
+							began to glow...
+						</p>
+					</a>
+					<a
+						href="https://dragonnight250.itch.io/chefs-quest-the-last-customer-20"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img src="./Image/chefs-quest.webp" alt="Chef's quest" />
+						<h3>Chef's quest: The last customer</h3>
+						<p>
+							Step into the heat of the kitchen and face the ultimate
+							challenge: an impossible-to-please customer!
+						</p>
+					</a>
+					<a href="./games/check-man/" target="_blank" rel="noopener" class="project-item">
+						<img src="./Image/checkman.webp" alt="Check Man" />
+						<h3>Check Man</h3>
+						<p>
+							Cover every target with chess attacks at the lowest piece cost.
+							A browser adaptation of my C# puzzle game, playable with mouse or touch.
+						</p>
+					</a>
+					<a href="./games/space-invaders/" target="_blank" rel="noopener" class="project-item">
+						<img src="./Image/space-invaders.webp" alt="Space Invaders gameplay" loading="lazy" />
+						<h3>Space Invaders</h3><p>Defend your shields, dodge enemy fire and survive escalating waves. Keyboard and touch controls.</p>
+					</a>
+					<a href="https://shashu12138.github.io/2048-game/" target="_blank" rel="noopener" class="project-item">
+						<img src="./Image/2048.webp" alt="2048 number puzzle" loading="lazy" />
+						<h3>2048</h3><p>Slide and combine matching numbers. Plan your moves and work towards the 2048 tile.</p>
+					</a>
+					<a
+						href="https://shashu12138.github.io/Yahtezz/"
+						target="_blank"
+						rel="noopener"
+						class="project-item"
+					>
+						<img src="./Image/yathzee.webp" alt="Yahtzee" />
+						<h3>Yahtzee</h3>
+						<p>
+							The objective of Yahtzee is to get as many points as
+							possible by rolling five dice and getting certain
+							combinations of dice.
+						</p>
+					</a>
+				</div>
+				<p class="gallery-note">
+					Older game projects are published across two itch.io accounts
+					(<a href="https://shashu12138.itch.io" target="_blank" rel="noopener">shashu12138</a>
+					and
+					<a href="https://dragonnight250.itch.io" target="_blank" rel="noopener">dragonnight250</a>).
+				</p>
+			</section>
+
+			<!-- Experience Section -->
+			<section class="experience" id="experience">
+				<h2>Experience</h2>
+				<div class="xp-item">
+					<div class="xp-head">
+						<span class="xp-role"
+							>Web Developer Intern
+							<span class="xp-org">— WebspaceZ, Amsterdam</span></span
+						>
+						<span class="xp-date">Sep 2025 — Feb 2026</span>
+					</div>
+					<ul>
+						<li>
+							Independently developed and delivered an online promotional-image editor,
+							now in use, for shop owners without Photoshop experience.
+						</li>
+						<li>
+							Integrated an AI image-generation API so users could create product imagery
+							and incorporate it into promotional designs in one workflow.
+						</li>
+					</ul>
+				</div>
+				<div class="xp-item">
+					<div class="xp-head"><span class="xp-role">Test Engineer <span class="xp-org">— PowerColor</span></span><span class="xp-date">Oct 2023 — Jun 2024</span></div>
+					<ul><li>Conducted functional and performance testing of graphics hardware using diagnostic and benchmarking tools.</li><li>Identified and documented issues affecting display output, power consumption, thermal behaviour and acoustics.</li></ul>
+				</div>
+				<div class="xp-item">
+					<div class="xp-head">
+						<span class="xp-role"
+							>Web Developer Intern
+							<span class="xp-org">— WebspaceZ, Amsterdam</span></span
+						>
+						<span class="xp-date">Oct 2022 — Mar 2023</span>
+					</div>
+					<ul>
+						<li>
+							Designed and built production websites for real clients in
+							HTML, CSS and JavaScript, including the Dutch association of
+							acupuncture physicians (Nederlandse Artsen Acupunctuur
+							Vereniging).
+						</li>
+						<li>
+							Owned both the design and the front-end build of each page,
+							working from the client's brief rather than from a fixed
+							template.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Skills reflect the current CV, without arbitrary percentage ratings. -->
+			<section class="skills" id="skills">
+				<h2>Skills</h2>
+				<div class="skills-container">
+					<div class="skill"><h3>Development</h3><p>C#, JavaScript, HTML, CSS, Python</p></div>
+					<div class="skill"><h3>Tools</h3><p>Unity, Godot, Git</p></div>
+					<div class="skill"><h3>Basic knowledge</h3><p>PHP, MySQL, Lit, TypeScript</p></div>
+				</div>
+			</section>
+
+			<!-- Contact Section with integrated form and social media links -->
+			<section class="contact" id="contact">
+				<h2>Contact</h2>
+				<p>
+					Email:
+					<a href="mailto:zejing2001@hotmail.com">zejing2001@hotmail.com</a>
+				</p>
+				<p>
+					CV:
+					<a href="./Ze-Jing-CV-EN.pdf" download="Ze Jing CV"
+						>Download (PDF)</a
+					>
+				</p>
+				<p>
+					GitHub:
+					<a href="https://github.com/ShaShu12138"
+						>github.com/ShaShu12138</a
+					>
+				</p>
+				<p>
+					LinkedIn:
+					<a href="https://www.linkedin.com/in/ze-jing-b87900219/"
+						>linkedin.com/in/ze-jing-b87900219</a
+					>
+				</p>
+				<hr />
+				<p>
+					<a href="https://github.com/ShaShu12138" target="_blank" rel="noopener">
+						<img src="./Image/GitHub Logo.png" alt="GitHub" />
+					</a>
+				</p>
+			</section>
+		</div>
+
+		<script src="./Script/main.js"></script>
+	</body>
+</html>
